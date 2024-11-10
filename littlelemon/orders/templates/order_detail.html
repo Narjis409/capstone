@@ -1,0 +1,14 @@
+
+{% extends 'base.html' %}
+
+{% block title %}Order Details{% endblock %}
+
+{% block content %}
+<h1 >Order Details</h1>
+<p>Meal: {{ order.meal.name }}</p>
+<p>Quantity: {{ order.quantity }}</p>
+<p>Status: {{ order.status }}</p>
+<p>Total Price: ${{ order.get_total_price }}</p>
+<p>Order Date: {{ order.order_date }}</p>
+<a href="{% url 'order_list' %}" class="btn btn-secondary">Back to Orders</a>
+{% endblock %}

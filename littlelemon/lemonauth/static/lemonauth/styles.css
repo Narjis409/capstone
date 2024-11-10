@@ -1,0 +1,316 @@
+/* General Style */
+:root {
+    --main-text-color: #f4623a;
+    --main-buttom-redus: 20px;
+    --main-line-hieght: 30px;
+    --main-margine-bottom: 50px;
+    --button-width: 150px;
+    --p-color: #655F68;
+    font-family: Arial, sans-serif;
+  }
+  
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  /* General Style */
+  
+  /* NavBar Main */
+  
+  .navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 5px solid #f4623a;
+    background-color:white;
+    height: 50px;
+  }
+  
+  .logo h1 {
+    display: flex;
+    align-items: center;
+    color: #f4623a;
+  }
+  
+  .logo img {
+    height: 40px;
+    width: 190px;
+    margin-right: 10px;
+  }
+  
+  .logo span {
+    color: #f4623a;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    cursor: pointer;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+  }
+  
+  .nav-links li {
+    margin-left: 30px;
+    position: relative;
+  }
+  
+  .nav-links li a {
+    color: #f4623a;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  .nav-links a:hover, .nav-links a.active, 
+  .account a:hover, .account a.active {
+      color: #f4623a;
+      display: flex;
+      line-height: 25px;
+      background-color: #e6cda9;
+      /* font-weight: bold; */
+  }
+  
+  .dropdown .caret {
+    font-size: 20px;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0 4px 8px #f4623a;
+    z-index: 1;
+    border-radius: 5px;
+  }
+  
+  .dropdown-content a {
+    color: #f4623a;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #e6cda9;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .account {
+    display: flex;
+    align-items: center;
+  }
+  
+  .accountimg {
+    width: 50px;
+    height: 40px;
+    border-radius: 70%;
+    border: #F8F7FA;
+  }
+  
+  .account button {
+    color: #f4623a;
+    text-decoration: none;
+    padding: 6px;
+    font-size: 16px;
+    
+  }
+  
+  #content {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .content-item {
+    display: none;
+    font-size: 24px;
+    margin: 20px 0;
+  }
+  
+  .show {
+    display: block;
+  }
+  
+  
+  
+  /* NavBar Main */
+  
+  /* Main */
+  
+  /* Main Image */
+  .main-image {
+    position: relative;
+    background: url("../img/images..jpg") center;
+    background-size: cover;
+    height: 450px;
+    border-radius: 0px 0px 200px 0px;
+    margin-bottom: var(--main-margine-bottom);
+  }
+  
+  .main-image::before {
+    content: ""; 
+    position: absolute; 
+    top: 0; 
+    left: 0;
+    right: 0; 
+    bottom: 0; 
+    background: rgba(0, 0, 0, 0.5); 
+    border-radius: 0px 0px 200px 0px; 
+    z-index: 1;
+  }
+  
+  main section .main-image .content {
+    position: relative; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    gap: 20px;
+    color: white;
+    z-index: 2;
+  }
+  
+  main section .main-image .content h1,
+  main section .main-image .content p,
+  main section .main-image .content button {
+    width: 450px;
+  }
+  
+  main section .main-image .content h1 {
+    font-size: 34px;
+  }
+  
+  main section .main-image .content p {
+    font-size: 18px;
+    line-height: var(--main-line-hieght);
+  }
+  
+  main section .main-image .content button {
+    width: var(--button-width);
+    padding: 10px 20px;
+    border-radius: var(--main-buttom-redus);
+    border: none;
+    color: var(--main-text-color);
+    cursor: pointer;
+  }
+  
+  /* Main Image */
+  
+  .categories .content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--main-margine-bottom);
+  }
+  
+  .categories .content .title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .categories .content .title h2{
+    color: var(--main-text-color);
+  }
+  
+  .categories .content .title p {
+    color: var(--p-color);
+  }
+  
+  .categories .content button{
+    width: var(--button-width);
+    padding: 10px 20px;
+    background-color: white;
+    border: 1px solid var(--main-text-color);
+    border-radius: var(--main-buttom-redus);
+    cursor: pointer;
+  }
+  
+  .categories .card{
+    display: grid;
+    grid-template-columns: repeat(3, 250px);
+    grid-template-rows: 200px;
+    gap: 50px;
+    justify-content: center;
+    margin-bottom: 150px;
+  }
+  
+  .categories .card .child-card{
+    background:#f4623a;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    align-items: center;  
+    justify-content: center;
+  }
+  
+  .categories .card .child-card h3{
+    padding: 0px 30px;
+    text-align: center;
+    line-height: var(--main-line-hieght);
+  }
+  
+  
+  .categories .feedback .title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: var(--main-text-color);
+    margin-bottom: var(--main-margine-bottom);
+  }
+  
+  .categories .feedback .title h1{
+    font-size: 32px;
+  }
+  
+  .categories .feedback .card{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 400px;
+    gap: 30px;
+  }
+  
+  .categories .feedback .card .feedback-card{
+    border: 1px solid var(--main-text-color);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding:20px;
+    gap: 10px;
+  }
+  
+  .categories .feedback .card .feedback-card img{
+    width: 25px;
+  }
+  
+  .categories .feedback .card .feedback-card p{
+    width: 100%;
+    line-height: var(--main-line-hieght);
+    height: 300px;
+  }

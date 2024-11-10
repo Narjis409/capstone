@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}Meal Details{% endblock %}
+
+{% block content %}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow">
+                <div class="card-header bg-white text-dark text-center">
+                    <h3>{{ meal.name }}</h3>
+                </div>
+                <div class="card-body bg-white">
+                    <p><strong>Description:</strong> {{ meal.description }}</p>
+                    <p><strong>Price:</strong> ${{ meal.price }}</p>
+                    <p><strong>Available:</strong> {{ meal.available }}</p>
+                    <div class="d-flex justify-content-between">
+                        <a href="{% url 'meals_update' meal.id %}" class="btn btn-success">Edit</a>
+                        <a href="{% url 'meals_delete' meal.id %}" class="btn btn-danger">Delete</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+
+{% comment %} {% extends 'base.html' %}
+{% block title %}The description{% endblock %}
+{% block content %}
+
+    <h1>{{ meal.name }}</h1>
+    <p>{{ meal.description }}</p>
+    <p>${{ meal.price }}</p>
+    <p>Available: {{ meal.available }}</p>
+    <a href="{% url 'meals_update' meal.id %}">Edit</a> ///
+    <a href="{% url 'meals_delete' meal.id %}">Delete</a>
+
+{% endblock %} {% endcomment %}

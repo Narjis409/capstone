@@ -1,0 +1,36 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}The Menu{% endblock %}
+
+{% block content %}
+    {% if messages %}
+        <div class="messages">
+            {% for message in messages %}
+                <div class="alert {% if message.tags %} alert-{{ message.tags }} {% endif %}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    <h1 class=" text-center m-5 p-3"> OUR MENU</h1>
+    <a href="{% url 'meals_create' %}" class="btn-add position-absolute bottom-0 end-0 m-3 btn btn-lg" style="z-index: 1; font-size: 4rem; padding: 1rem 2rem;">
+        <i class="fas fa-plus-circle text-white"></i>
+    </a>
+    
+    <div class="row d-flex justify-content-center">
+        {% for meal in object_list %}
+            <div class="col-md-4 mb-4 d-flex justify-content-center">
+                <div class="card " style="width: 20rem;">
+                    <img src="{% static 'img/burger-hamburger-cheeseburger.jpg' %}" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ meal.name }}</h5>
+                        <p class="card-text">${{ meal.price }}</p>
+                        <a href="{% url 'meals_detail' meal.id %}" class="btn btn-warning text-dark">View Details</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

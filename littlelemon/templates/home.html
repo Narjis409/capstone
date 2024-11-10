@@ -1,0 +1,160 @@
+
+{%load static%}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'lemonauth/styles.css' %}" >
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          
+            <h1>lemon</h1>
+        </div>
+    
+        <ul class="nav-links">
+            <li><a href="#" >Home</a></li>
+            <li><a href="{% url 'meals_list' %}" >Menu</a></li>
+            <li><a href="{% url 'reservation_list' %}" >Reservations</a></li>
+            <li><a href="{% url 'order_list' %}" >Orders</a></li>
+        </ul>
+        <div class="account">
+          <form method="POST" action="{% url 'logout' %}">
+            {% csrf_token %}
+            <div class="account">
+               
+               <a href=""><button type="submit" class="btn btn-primary " >Logout</button></a> 
+            </div>
+            
+            
+        </form>
+        </div>
+    </nav>
+    
+    </header>
+    <!-- Header -->
+
+    <!-- Main -->
+    <main>
+      <section>
+        <div class="main-image">
+          <div class="content container">
+            <h1>
+              Find your fav meals with <br />
+              lemon
+            </h1>
+
+            <button >Order now</button>
+          </div>
+        </div>
+      </section>
+      <!-- Main Image -->
+
+      <!-- Categories -->
+      <section class="categories container">
+        <div class="content">
+          <div class="title">
+            <h2>Top Categories</h2>
+            <p>Explore our Popular Categories</p>
+          </div>
+          <button>All categories</button>
+        </div>
+
+        <div class="card">
+          <div class="child-card">
+            <h3>Arabic</h3>
+          </div>
+          <div class="child-card">
+            <h3>dessert</h3>
+          </div>
+          <div class="child-card">
+            <h3>healthy</h3>
+          </div>
+        </div>
+
+        <div class="feedback">
+          <div class="title">
+            <h1>customrs feedbacks</h1>
+            <h3>What customrs say about lemon</h3>
+          </div>
+
+          <div class="card">
+            <div class="feedback-card">
+              
+              <p>
+                Lemon Rest is a fantastic spot! The lemon-infused grilled chicken was delicious,
+                 and the vegan risotto was a hit. The service was attentive, and the lemon tart was the perfect ending.
+                  Highly recommend!
+              </p>
+              <div class="evaluation">
+                <span>Maria</span>
+                <span>⭐️ ⭐️ ⭐️ ⭐️ ⭐️</span>
+              </div>
+            </div>
+            <div class="feedback-card">
+              
+              <p>
+                Lemon Rest is a fantastic spot! The lemon-infused grilled chicken was delicious, 
+                and the vegan risotto was a hit. The service was attentive, and the lemon tart was the perfect ending.
+                 Highly recommend!
+              </p>
+              <div class="evaluation">
+                <span>Assel</span>
+                <span>⭐️ ⭐️ ⭐️ ⭐️ ⭐️</span>
+              </div>
+            </div>
+            <div class="feedback-card">
+              
+              <p>
+                Lemon Rest is a fantastic spot! The lemon-infused grilled chicken was delicious,
+                 and the vegan risotto was a hit. The service was attentive, and the lemon tart was the perfect ending.
+                  Highly recommend!
+              </p>
+              <div class="evaluation">
+                <span>Mary</span>
+                <span>⭐️ ⭐️ ⭐️ ⭐️ ⭐️</span>
+              </div>
+            </div>
+            <div class="feedback-card">
+              
+              <p>
+                Lemon Rest is a fantastic spot! The lemon-infused grilled chicken was delicious,
+                 and the vegan risotto was a hit. The service was attentive, and the lemon tart was the perfect ending. 
+                 Highly recommend!
+              </p>
+              <div class="evaluation">
+                <span>Randa</span>
+                <span>⭐️ ⭐️ ⭐️ ⭐️ ⭐️</span>
+              </div>
+            </div>
+          </div>
+        </div>
+    </main>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
